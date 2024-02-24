@@ -1,0 +1,74 @@
+.prod{
+    /* border: 1px solid red!important; */
+    display: inline-block;
+    align-items: right;
+    margin: 0px;
+    width:100%; 
+    height:550px;
+    box-shadow:none;
+    /* border:none; */
+    background-color:white; 
+    padding:0px   
+}
+.prod h1{
+    font-size:x-large;
+    color: blue;
+    border-bottom: 2px solid black;
+    height: 50px;
+    width:100%;
+    text-decoration: dotted!important;
+}
+.prod img{
+    position: relative;
+    left: 100px;
+    /* margin-right: 0px!important; */
+    
+    
+}
+.prod  .disc{
+    /* border: 1px solid red; */
+    font-family:cursive ;
+    font-size: larger;
+    font-weight: bolder;
+    position: relative;
+    width: 600px; 
+    margin-left:200px;
+    /* height: 100px;
+    top: 50px; */
+    /* left: 100px; */ 
+    display: inline-block;
+    
+}
+.prod .rat{
+    /* border: 1px solid red; */
+    /* left: 500px; */
+    font-family:cursive ;
+    font-size: larger;
+    font-weight: bolder;
+    display: inline-block!important;
+    /* display: block */
+    width: 120px;
+    margin-left: 400px;
+}
+.prod .stk{
+    font-family:cursive ;
+    font-size: larger;
+    font-weight: bolder;
+    display: inline-block;
+    margin-left: 10px!important;
+    width: 120px;
+    
+}
+.prod .price{
+    font-family:cursive ;
+    font-size: larger;
+    font-weight: bolder;
+    display: inline-block;
+    width: 200px;
+    margin-left: 400px;
+}
+.prod button{
+    margin-left: 300px;
+    background-color: red;
+    color: antiquewhite;
+}

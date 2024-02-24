@@ -1,0 +1,27 @@
+.cart_items{
+    box-shadow: none;
+    background-color: white;
+    width: 1000px;
+    /* border: none; */
+    height:120px;
+    display: flex;
+    justify-content: space-between;
+}
+.cart_image{
+    position: relative;
+
+    top: -10px;
+    height: 100px;
+    width: 100px;
+}
+.cart_items h3{
+    font-size: 20px;
+    width: 300px;
+}
+.cart_items button{
+    background-color: red;
+    border-radius:12px;
+    color:white;
+    width: 100px;
+    height: 30px;
+}
