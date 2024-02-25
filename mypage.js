@@ -5,7 +5,7 @@
             return response.json()
         }).then((data)=>{
             console.log(data);
-
+            localStorage.setItem('productList', JSON.stringify(data));
             let products = document.getElementById("products")
             // let productHTML = '';
             // let covid_data = document.getElementsByTagName("tbody")[0]
@@ -18,7 +18,7 @@
                 <img src="${data[i].image}"  height="200px" width="200px"/>
                 <h3>${data[i].title}</h3>
                 <span>${data[i].rating.rate}</span>
-                <p><strong>Price:</strong> ${data[i].price}$</p></a>
+                <p class="pricemain"><strong>Price:</strong> ${data[i].price}$</p></a>
                 <button id="add_to_cart" product_id=${data[i].id}>add to cart</button>
                 </div>
                     `
@@ -30,7 +30,7 @@
             let product= document.querySelectorAll('.prod_link');
             // console.log(product);
             console.log(product_Card);
-      
+            
             product_Card.forEach(function (el) {
                 let child = el.childNodes;
                 console.log(child);
@@ -39,24 +39,42 @@
                     localStorage.setItem('singleproduct', JSON.stringify(data[parseInt(child[0].textContent)-1]))
                    window.location='product.html' + '?pid='+child[0].innerText;
                    localStorage.setItem('product_id', child[0].innerText)
-                   
                })
            });
            let y = document.getElementsByClassName
        
            addToCart()
-            
-               
-          function addToCart(){
-              
+            // console.log(data[1].image);
+        
+          function addToCart(){  
            let  addToCartBtn=document.querySelectorAll('#add_to_cart')
+            pid =[]
            console.log(addToCartBtn);
            for(let i=0 ; i<addToCartBtn.length;i++){
             addToCartBtn[i].addEventListener( "click", function (e) {
                 count.innerText = Number(localStorage.getItem("count")) + 1
                 localStorage.setItem("count",Number(localStorage.getItem("count"))+1 )
-                alert("Added to Cart you have in the cart");
-
+                pid.push(localStorage.setItem("product_id",addToCartBtn[i].getAttribute("product_id")));
+                alert(`Added to Cart Successfully!`)
+                let item={
+                    "image":data[i].image,
+                "name":data[i].title,
+                "quantity":1,
+                "price":parseInt(data[i].price),
+                "pid":addToCartBtn[i].getAttribute('product_id'),
+            }
+          
+          if(!localStorage.getItem('products')){
+              let products = [];
+              products.push(item);
+              localStorage.setItem("products", JSON.stringify(products));
+          }else {
+              let products = JSON.parse(localStorage.getItem('products'));
+              if (!products.some((x)=>(x.pid == item.pid))) {
+                  products.push(item);  
+                  localStorage.setItem("products", JSON.stringify(products))      
+              }
+          }        
             })
         }
            count.innerText = localStorage.getItem("count") || 0

@@ -8,7 +8,7 @@ JSON.parse(oneproduct[0])
 let prod = JSON.parse(oneproduct[0])
 console.log(prod.rating);
 document.querySelector(".single_product").innerHTML += `
-        <div id=product class="product_card prod_link prod">
+        <div id=product class="product_card prod">
         <span>${prod.id}</span>
         <h1>${prod.title}</h1>
         <img src="${prod.image}"  height="200px" width="200px"/>
@@ -47,9 +47,15 @@ document.querySelector(".single_product").innerHTML += `
                       products.push(item);  
                       localStorage.setItem("products", JSON.stringify(products))      
                   }
-              }                        
+              }                      
           })
+          console.log(addToCartBtn[0].ATTRIBUTE_NODE);
+          if (addToCartBtn[0].ATTRIBUTE_NODE===localStorage.getItem("products")){
+            
+          }
      }
+
+
 
 
      

@@ -13,7 +13,7 @@
 .prod h1{
     font-size:x-large;
     color: blue;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid black!important;
     height: 50px;
     width:100%;
     text-decoration: dotted!important;
