@@ -40,17 +40,30 @@ console.log(cart_products[0]);
         <img class="cart_image" src="${cart_products[0][i].image}"  height="200px" width="200px"/>
         <h3 class="cart_name">${cart_products[0][i].name}</h3>
         <p><strong>Price:</strong> ${cart_products[0][i].price}$</p></a>
-        <button class="remove_from" product_id=${cart_products[0][i].pid}>remove</button>
+        <button class="remove_from" product_id=${i}>remove</button>
         </div>
     `
 }
-console.log(cart_products[0][1].pid);
+// console.log(cart_products[0][2].pid);
 let remove = document.querySelectorAll(".remove_from")
 console.log(remove);
 remove.forEach(function (e){
     console.log(e.attributes[1].nodeValue);
     // let cid = e.attributes[1].nodeValue
     e.addEventListener("click",(event)=>{
+        // e.preventDefault()
+        event.stopPropagation();
+    // e.parentElement.remove()
+
+        let pid = parseInt(event.target.attributes["product_id"].value)
+        console.log(typeof(pid));
+        cart_products[0].splice(pid,1)
+        console.log(cart_products[0]);
+        let count=localStorage.getItem('count')
+        count--
+        localStorage.setItem('count',count)
+        localStorage.setItem("products", JSON.stringify(cart_products[0]))
+        location.reload()
         // console.log(event.indexOf(cid.nodeValue));
     //     let cid = e.attributes[1]
     //     console.log(cid);
@@ -70,20 +83,29 @@ remove.forEach(function (e){
     //       remove_element[i].remove()
     //   }
     // }
-    e.parentElement.remove()
-    let cart_items = document.getElementsByClassName( "cart_items" )[0];
-    console.log(cart_item);
-    localStorage.setItem("products",JSON.stringify(cart_items))
-
+    // let count = localStorage.getItem('count')
+    // count = JSON.parse(count)
+    // count-=1
+    // localStorage.setItem('count',JSON.stringify(count))
+    // location.reload();
+    // console.log(e.getAttribute("product_id"));
+    // let cart_index = e.getAttribute("product_id");
     
+    
+// let cart_items = document.getElementsByClassName("cart_items");   
+// console.log(cart_items); 
+// let cartarr = cart_items[0];
+// console.log(cartarr);
+// for(let i=0;i<cart_products.length;i++){
+//     console.log(cart_products[i]);
+//     cart_products.splice(cart_index,1)
+//     console.log(cart_products[0]);
+//     }
 })
 
+// let  cart_index =document.getElementById("addToCartBtn");
+// addtoCartBtn.getAttribute("product_id")
+// console.log(cart_index);
+console.log(cart_products[0]);
+
 })
-function remove_items(e){
-    let remove = document.querySelectorAll(".remove_from")
-    // let cart_products = localStorage.getItem("products")
-    for (let i=0;i<cart_products[0].length;i++){
-        console.log(cart_products[0][i]);
-        
-    }
-}
