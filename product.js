@@ -49,10 +49,6 @@ document.querySelector(".single_product").innerHTML += `
                   }
               }                      
           })
-          console.log(addToCartBtn[0].ATTRIBUTE_NODE);
-          if (addToCartBtn[0].ATTRIBUTE_NODE===localStorage.getItem("products")){
-            
-          }
      }
 
 
