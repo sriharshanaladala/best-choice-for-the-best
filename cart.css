@@ -52,6 +52,12 @@ li a{
     position: relative;
     top: -3px;
 }
+#cart{
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    flex-wrap: wrap; 
+}
 sup{
     background-color: red;
     position: relative;
@@ -68,7 +74,7 @@ sup{
     background-color: white;
     position: relative;
     top: 10PX;
-    width: 1000px;
+    width: 800px;
     /* border: none; */
     height:120px;
     display: flex;
@@ -99,25 +105,40 @@ sup{
     color: black;
 }
 .buttn{
-    margin-top: 20px!important;
+    /* margin-top: 20px!important; */
     /* border-radius: ; */
     position: fixed;
-    left: 1000px;
+    left: 1100px;
+}
+.buttn{
+    position: relative;
+    margin-top: -100px;
+    margin-left: -200px;
+    /* display: block; */
+    /* left: 0px; */
+    /* left: 0px; */
+    /* align-items: center;  */
 }
 .buttn button{
     border-radius: 10px;
+    box-sizing: content-box;
+    position: relative;
+    width: 100px;
+    left: -50px;
+    /* width: fit-content; */
+    /* flex-wrap: wrap; */
 } 
 .total{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
     font-size: 25px;
     display: inline-block;
-    position: absolute;
-    right: 0px;
-    bottom: 155px;
-    height: 430px;
-    width: 365px;
+    position: relative;
+    left:-280px;
+    top: -100px;
+  
+    /* width: 365px; */
     /* display: flex; */
 }

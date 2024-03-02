@@ -64,48 +64,23 @@ remove.forEach(function (e){
         localStorage.setItem('count',count)
         localStorage.setItem("products", JSON.stringify(cart_products[0]))
         location.reload()
-        // console.log(event.indexOf(cid.nodeValue));
-    //     let cid = e.attributes[1]
-    //     console.log(cid);
-    // //    cart_products[0].splice(cid,1)
-    //     console.log(cart_products[0].length);
-    //     for(let j=0;j<cart_products[0].length;j++)
-    //     if(cid[j].nodeValue === cart_products[0][j].pid){
-    //         console.log("equal");
-    //     }
-    // 
-    // let remove_element = document.getElementsByClassName("cart_remove")
-    // console.log(remove_element);
-    // let pid = parseInt(e.attributes["product_id"].value)
-    // console.log(pid);
-    // for(var i=0;i<remove_element.length;i++ ){
-    //   if(remove_element[i].childNodes[1].innerText == e.parentElement.childNodes[1].innerText){
-    //       remove_element[i].remove()
-    //   }
-    // }
-    // let count = localStorage.getItem('count')
-    // count = JSON.parse(count)
-    // count-=1
-    // localStorage.setItem('count',JSON.stringify(count))
-    // location.reload();
-    // console.log(e.getAttribute("product_id"));
-    // let cart_index = e.getAttribute("product_id");
-    
-    
-// let cart_items = document.getElementsByClassName("cart_items");   
-// console.log(cart_items); 
-// let cartarr = cart_items[0];
-// console.log(cartarr);
-// for(let i=0;i<cart_products.length;i++){
-//     console.log(cart_products[i]);
-//     cart_products.splice(cart_index,1)
-//     console.log(cart_products[0]);
-//     }
 })
 
-// let  cart_index =document.getElementById("addToCartBtn");
-// addtoCartBtn.getAttribute("product_id")
-// console.log(cart_index);
+
 console.log(cart_products[0]);
 
 })
+let cart_item1 = document.getElementsByClassName("price")
+console.log(cart_item1);
+localStorage.setItem("total",JSON.stringify(cart_item1));
+for(let j=0;j<cart_item1.length;j++) {
+    // let price = parseFloat(cart_item1[j].innerText.slice(1))
+    // let total = JSON.parse(localStorage.getItem("total"))
+    // if(!total) {
+    //     total=[];
+    // }  
+    // total.push(price) 
+    // localStorage.setItem("total",JSON.stringify(total))     
+}
+
+
