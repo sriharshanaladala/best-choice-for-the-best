@@ -107,12 +107,12 @@ sup{
 .buttn{
     /* margin-top: 20px!important; */
     /* border-radius: ; */
-    position: fixed;
+    /* position: fixed; */
     left: 1100px;
 }
 .buttn{
     position: relative;
-    margin-top: -100px;
+    margin-top: 200px;
     margin-left: -200px;
     /* display: block; */
     /* left: 0px; */

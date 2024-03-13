@@ -14,7 +14,7 @@ clearcart.addEventListener('click',(e)=>{
 })
 closecart.addEventListener('click',(e)=>{
     e.preventDefault()
-    window.location='mypage.html'
+    window.location='index.html'
 })
 check_out.addEventListener('click',(e)=>{
     e.preventDefault()
@@ -23,7 +23,7 @@ check_out.addEventListener('click',(e)=>{
     }else{
     alert("order succesfull")
     localStorage.removeItem("count")
-      location.href='mypage.html';
+      location.href='index.html';
     }
 })
 
