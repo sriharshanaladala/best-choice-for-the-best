@@ -20,6 +20,7 @@ check_out.addEventListener('click',(e)=>{
     e.preventDefault()
     if (localStorage.getItem("count")==0){
         alert( "Please add some items to your cart before checking out.")
+        location.href='index.html'
     }else{
     alert("order succesfull")
     localStorage.removeItem("count")

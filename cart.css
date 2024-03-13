@@ -53,10 +53,15 @@ li a{
     top: -3px;
 }
 #cart{
-    display: flex;
+    display: inline-block;
     justify-content:flex-start;
     flex-direction: column;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    border: 1px solid red;
+}
+#cart h1{
+    position: relative;
+    top: 200px;
 }
 sup{
     background-color: red;
@@ -73,7 +78,7 @@ sup{
     box-shadow: none;
     background-color: white;
     position: relative;
-    top: 10PX;
+    top: 120PX;
     width: 800px;
     /* border: none; */
     height:120px;
@@ -95,6 +100,7 @@ sup{
     width: 300px;
 }
 .cart_items button{
+    /* border: 1px solid red; */
     background-color: red;
     border-radius:12px;
     color:white;
@@ -107,14 +113,15 @@ sup{
 .buttn{
     /* margin-top: 20px!important; */
     /* border-radius: ; */
-    /* position: fixed; */
+    position: fixed;
     left: 1100px;
 }
 .buttn{
     position: relative;
-    margin-top: 200px;
+    top: 00px;
+    margin-top: 0px;
     margin-left: -200px;
-    /* display: block; */
+    /* display: flex; */
     /* left: 0px; */
     /* left: 0px; */
     /* align-items: center;  */
@@ -124,7 +131,8 @@ sup{
     box-sizing: content-box;
     position: relative;
     width: 100px;
-    left: -50px;
+    top: 100px;
+    left: -200px;
     /* width: fit-content; */
     /* flex-wrap: wrap; */
 } 
@@ -135,10 +143,9 @@ sup{
     font-weight: bold;
     font-size: 25px;
     display: inline-block;
+    padding: 8px;
+    /* background-color: #f9d4 */
     position: relative;
-    left:-280px;
-    top: -100px;
-  
     /* width: 365px; */
     /* display: flex; */
 }
