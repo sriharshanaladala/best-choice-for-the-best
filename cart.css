@@ -53,11 +53,11 @@ li a{
     top: -3px;
 }
 #cart{
-    display: inline-block;
+    /* display: inline-block; */
     justify-content:flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 #cart h1{
     position: relative;
@@ -78,7 +78,7 @@ sup{
     box-shadow: none;
     background-color: white;
     position: relative;
-    top: 120PX;
+    /* top: 120PX; */
     width: 800px;
     /* border: none; */
     height:120px;
@@ -111,33 +111,21 @@ sup{
     color: black;
 }
 .buttn{
+    /* border: 1px solid red; */
     /* margin-top: 20px!important; */
-    /* border-radius: ; */
+    /* border-radius: 10px; */
+    display: inline-block;
     position: fixed;
-    left: 1100px;
+    left: 900px;
+    top: 200px;
+    
 }
-.buttn{
-    position: relative;
-    top: 00px;
-    margin-top: 0px;
-    margin-left: -200px;
-    /* display: flex; */
-    /* left: 0px; */
-    /* left: 0px; */
-    /* align-items: center;  */
-}
+
 .buttn button{
-    border-radius: 10px;
-    box-sizing: content-box;
-    position: relative;
-    width: 100px;
-    top: 100px;
-    left: -200px;
-    /* width: fit-content; */
-    /* flex-wrap: wrap; */
+border-radius: 10px;
 } 
 .total{
-    /* border: 2px solid green; */
+    border: 2px solid green;
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
@@ -145,7 +133,19 @@ sup{
     display: inline-block;
     padding: 8px;
     /* background-color: #f9d4 */
-    position: relative;
+    position: fixed;
+    left: 1000px;
+    top: 70px;
+    
+    /* top: -100px; */
     /* width: 365px; */
-    /* display: flex; */
+
+}
+.add,.decrease{
+    border:none;
+    background-color: rgb(250, 246, 32)!important;
+    color: black!important;
+    width: 20px!important;
+    padding: 1px;
+    box-shadow:rgb(248, 3, 24)  2px 2px 1px;
 }

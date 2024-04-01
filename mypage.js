@@ -60,7 +60,7 @@
                     "image":data[i].image,
                 "name":data[i].title,
                 "quantity":1,
-                "price":parseInt(data[i].price),
+                "price":parseFloat(data[i].price).toFixed(2),
                 "pid":addToCartBtn[i].getAttribute('product_id'),
             }
           
